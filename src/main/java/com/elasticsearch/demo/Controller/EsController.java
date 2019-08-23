@@ -31,7 +31,7 @@ public class EsController {
 
     /**
      * 单字符串模糊查询，默认排序。将从所有字段中查找包含传来的word分词后字符串的数据集
-     *  http://localhost:8080/singleWord?word=浣溪沙&size=20
+     *  http://localhost:8080/esController/singleWord?word=浣溪沙&size=20
      */
     @RequestMapping("/singleWord")
     public Object singleTitle(String word, @PageableDefault Pageable pageable) {
