@@ -88,6 +88,11 @@ public class EsController {
         return postRepository.save(post);
     }
 
+    @RequestMapping("/del")
+    public void del() {
+        postRepository.deleteAll();
+    }
+
     @RequestMapping("/singlePhraseMatch1")
     public Object singlePhraseMatch1(String content, @PageableDefault Pageable pageable) {
         //SearchQuery searchQuery = new NativeSearchQueryBuilder().withQuery(matchPhraseQuery("content", content)).withPageable(pageable).build();
